@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+ 
+<body>
+ 
+    <main class="container">
+        <h2> Cadastro </h2>
+        <form id="form-cadastro">
+            <div class="input-field">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required placeholder="Entre com seu Nome">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" required placeholder="Entre com seu CPF">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Entre com seu E-mail">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required placeholder="Entre com sua Senha">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <label for="confirmar-senha">Confirmar Senha</label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha" required placeholder="Confirme sua Senha">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <label for="grupo">Grupo</label>
+                <select id="grupo" name="grupo" required>
+                    <option value="admin">Admin</option>
+                    <option value="estoquista">Estoquista</option>
+                </select>
+                <div class="underline"></div>
+            </div>
+            <button type="submit"> Confirmar </button>
+        </form>
+    </main>
+ 
+    <script src="./JS/cadastro.js"></script>
+</body>
+</html>

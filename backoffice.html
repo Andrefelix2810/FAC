@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backoffice</title>
+</head>
+<body>
+    <h1> Bem-vindo ao Backoffice </h1>
+    <p> Escolha uma opção: </p>
+    <ul>
+        <li><a href="produtos.html"> 1. Listar Produtos </a></li>
+        <li id="admin-option"><a href="listaUsuario.html"> 2. Listar Usuários </a></li>
+    </ul>
+ 
+    <script>
+        // Verifica se o usuário é administrador
+        fetch("http://localhost:8080/usuarios/sessao", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.grupo === "administrador") {
+                document.getElementById("admin-option").style.display = "block";
+            }
+        })
+        .catch(error => {
+            console.error("Erro ao verificar a sessão do usuário:", error);
+        });
+    </script>
+</body>
+</html>
+ 
