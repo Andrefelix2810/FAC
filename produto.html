@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/LogoFAC.png" type="image/x-icon">
+    <title>Formulário de Produto</title>
+</head>
+<body>
+    <form id="product-form" enctype="multipart/form-data">
+        <h2> Adicione um novo produto! </h2>
+        <div>
+            <br>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" maxlength="200" required>
+        </div>
+        <div>
+            <label for="avaliacao">Avaliação:</label>
+            <input type="number" id="avaliacao" name="avaliacao" step="0.5" min="1" max="5" required>
+        </div>
+        <div>
+            <label for="descricaoDetalhada">Descrição Detalhada:</label>
+            <textarea id="descricaoDetalhada" name="descricaoDetalhada" maxlength="2000" required></textarea>
+        </div>
+        <div>
+            <label for="preco">Preço:</label>
+            <input type="number" id="preco" name="preco" step="0.01" required>
+        </div>
+        <div>
+            <label for="qtdEstoque">Quantidade em Estoque:</label>
+            <input type="number" id="qtdEstoque" name="qtdEstoque" min="0" required>
+        </div>
+        <div>
+            <label for="imagens">Imagens:</label>
+            <input type="file" id="imagens" name="imagens" multiple required>
+        </div>
+        <div>
+            <label for="imagemPrincipal">Imagem Principal:</label>
+            <input type="number" id="imagemPrincipal" name="imagemPrincipal" min="0" required>
+        </div>
+        <br>
+        <button type="submit">Salvar</button>
+        <button type="button" onclick="window.location.href='/produtos'">Cancelar</button>
+    </form>
+    <script src="./FAC/JS/produto.js"></script>
+</body>
+</html>
