@@ -2,6 +2,7 @@ package com.ecommerce.FAC.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity(name = "imagens")
 @Data
@@ -14,5 +15,6 @@ public class Image {
 
     @ManyToOne
     @JoinColumn(name = "produto_id")
+    @JsonBackReference
     private Product produto;
 }
